@@ -15,6 +15,4 @@ int main()
     else if (marks<60)
         cout<<"Below Par"<<endl;
     return 0;
-    
-
 }
