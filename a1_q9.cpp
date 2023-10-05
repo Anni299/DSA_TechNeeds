@@ -1,24 +1,22 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
 using namespace std;
-int main()
-{
-    int n,k;
-    cin>>n>>k;
-    int a=n,i=0;
-    while (a>=0)
-    {
-        a/=10;
-        i++;
+int main(int argc, char **argv){
+    int num1, num2;
+    cin >> num1 >> num2;
+
+    int a = num1;
+    int b = num2;
+
+    while (a % b != 0){
+        int rem = a % b;
+        a = b;
+        b = rem;
     }
-    k=k%n;
-    if (k<0)
-        k+=i;
-    int p=pow(10,k);
-    int m=pow(10,i-k);
-    int q=n/p;
-    int r=n%p;
-    int ans=r*m + q;
-    cout<<ans<<endl;
+
+    int gcd = b;
+    int lcm = (num1 * num2) / gcd;
+
+    cout << (gcd) << endl;
+    cout << (lcm) << endl;
     return 0;
-}
+} 
